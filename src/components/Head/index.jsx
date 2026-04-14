@@ -1,5 +1,16 @@
+import { NavLink } from 'react-router-dom';
+import './style.css';
+
+const setActive = ({isActive}) => (isActive ? "active" : "");
+
 export function Head(){
- return <div>Head</div>
+ return <div className="header">
+    <nav className="nav-conteiner">
+<NavLink to="/news" className={setActive}>Новости</NavLink>
+<NavLink to="/about" className={setActive}>О проекте</NavLink>
+<NavLink to="/contacts" className={setActive}>Контакты</NavLink>
+    </nav>
+ </div>
 
 }
    
